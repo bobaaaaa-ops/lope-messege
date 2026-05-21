@@ -43,9 +43,11 @@
         transform:translateY(0) rotate(0deg);
         opacity:0;
       }
+
       30%{
         opacity:0.8;
       }
+
       100%{
         transform:translateY(-120vh) rotate(360deg);
         opacity:0;
@@ -78,6 +80,7 @@
         opacity:0;
         transform:translateY(30px);
       }
+
       to{
         opacity:1;
         transform:translateY(0);
@@ -146,29 +149,65 @@
       font-size:0.9rem;
     }
 
-    .flowers{
-      text-align:center;
-      font-size:50px;
-      margin-top:40px;
-      margin-bottom:20px;
-      animation: floatFlower 3s ease-in-out infinite;
+    /* BOUQUET PNG */
+
+    .bouquet{
+      position:relative;
+      width:320px;
+      height:400px;
+      margin:50px auto;
     }
 
-    @keyframes floatFlower{
+    .flower{
+      position:absolute;
+      width:120px;
+      animation:sway 4s ease-in-out infinite;
+    }
+
+    .flower1{
+      left:20px;
+      top:90px;
+      transform:rotate(-15deg);
+    }
+
+    .flower2{
+      left:95px;
+      top:10px;
+      width:140px;
+      z-index:2;
+    }
+
+    .flower3{
+      right:20px;
+      top:100px;
+      transform:rotate(15deg);
+    }
+
+    .wrap{
+      position:absolute;
+      bottom:0;
+      left:50%;
+      transform:translateX(-50%);
+      width:260px;
+      z-index:5;
+    }
+
+    @keyframes sway{
       0%{
-        transform: translateY(0px);
+        transform:translateY(0px);
       }
 
       50%{
-        transform: translateY(-10px);
+        transform:translateY(-8px);
       }
 
       100%{
-        transform: translateY(0px);
+        transform:translateY(0px);
       }
     }
 
     @media(max-width:600px){
+
       h1{
         font-size:2.2rem;
       }
@@ -180,7 +219,25 @@
       .letter{
         font-size:0.95rem;
       }
+
+      .bouquet{
+        width:260px;
+        height:320px;
+      }
+
+      .flower{
+        width:90px;
+      }
+
+      .flower2{
+        width:110px;
+      }
+
+      .wrap{
+        width:210px;
+      }
     }
+
   </style>
 </head>
 
@@ -260,7 +317,7 @@
 
       <br>
 
-      <button onclick="document.getElementById('lagu').play()">
+      <button onclick="playMusic()">
         Play Music ♫
       </button>
 
@@ -273,8 +330,18 @@
         aku harap akhirnya tetap kamu.
       </div>
 
-      <div class="flowers">
-        💐🌸🌷🌸💐
+      <!-- BOUQUET PNG -->
+
+      <div class="bouquet">
+
+        <img src="bunga-peony1.png" class="flower flower1">
+
+        <img src="bunga-peony2.png" class="flower flower2">
+
+        <img src="tulip.png" class="flower flower3">
+
+        <img src="wrap.png" class="wrap">
+
       </div>
 
       <div class="footer">
@@ -284,14 +351,22 @@
     </div>
   </div>
 
+  <!-- MUSIC -->
+
   <audio id="lagu" loop>
     <source src="music.mp3" type="audio/mp3">
   </audio>
 
   <script>
+
     function showMessage(){
       document.getElementById("message").style.display = "block";
     }
+
+    function playMusic(){
+      document.getElementById("lagu").play();
+    }
+
   </script>
 
 </body>
