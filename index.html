@@ -123,6 +123,7 @@
       cursor:pointer;
       transition:0.3s;
       box-shadow:0 5px 20px rgba(0,0,0,0.2);
+      margin-top:10px;
     }
 
     button:hover{
@@ -145,6 +146,28 @@
       font-size:0.9rem;
     }
 
+    .flowers{
+      text-align:center;
+      font-size:50px;
+      margin-top:40px;
+      margin-bottom:20px;
+      animation: floatFlower 3s ease-in-out infinite;
+    }
+
+    @keyframes floatFlower{
+      0%{
+        transform: translateY(0px);
+      }
+
+      50%{
+        transform: translateY(-10px);
+      }
+
+      100%{
+        transform: translateY(0px);
+      }
+    }
+
     @media(max-width:600px){
       h1{
         font-size:2.2rem;
@@ -160,6 +183,7 @@
     }
   </style>
 </head>
+
 <body>
 
   <div class="hearts">
@@ -180,7 +204,6 @@
       <p class="subtitle">
         Sebuah surat kecil dari seseorang yang selalu jatuh cinta
         ke orang yang sama setiap hari, orang itu adalah kamu
-        
       </p>
 
       <div class="letter">
@@ -203,7 +226,7 @@
         yang ngambek,
         yang capek,
         yang overthinking,
-        demua versi kamu.<br><br>
+        semua versi kamu.<br><br>
 
         Karena buat aku,
         rumah bukan tempat.
@@ -213,10 +236,10 @@
 
         Kadang aku masi suka mikir,
         Apa yang bisa kamu terima dari sorang seperti aku.
-        aku suka kamu
-        suara kamu, sentuhan lembut dari kamu
-        dan juga kata" manis dari kamu,
-        bikin hari aku sanagat berwarna.<br><br>
+        Aku suka kamu,
+        suara kamu, sentuhan lembut dari kamu,
+        dan juga kata-kata manis dari kamu,
+        bikin hari aku sangat berwarna.<br><br>
 
         Aku nga janji bakal selalu sempurna.
         Tapi aku janji bakal terus belajar.
@@ -235,6 +258,12 @@
         Click This Honey
       </button>
 
+      <br>
+
+      <button onclick="document.getElementById('lagu').play()">
+        Play Music ♫
+      </button>
+
       <div class="hidden-message" id="message">
         ❤ <br><br>
         Semoga kita selalu dipertemukan berkali-kali,
@@ -244,6 +273,10 @@
         aku harap akhirnya tetap kamu.
       </div>
 
+      <div class="flowers">
+        💐🌸🌷🌸💐
+      </div>
+
       <div class="footer">
         made with love, effort, and sedikit stress karena coding emang suka drama.
       </div>
@@ -251,14 +284,15 @@
     </div>
   </div>
 
+  <audio id="lagu" loop>
+    <source src="music.mp3" type="audio/mp3">
+  </audio>
+
   <script>
     function showMessage(){
       document.getElementById("message").style.display = "block";
     }
   </script>
 
-  <audio autoplay loop>
-  <source src="music.mp3" type="audio/mp3">
-  </audio>
-</body> 
+</body>
 </html>
