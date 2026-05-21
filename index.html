@@ -149,47 +149,16 @@
       font-size:0.9rem;
     }
 
-    /* BOUQUET PNG */
+    /* BOUQUET */
 
     .bouquet{
-      position:relative;
+      text-align:center;
+      margin-top:50px;
+    }
+
+    .bouquet-img{
       width:320px;
-      height:400px;
-      margin:50px auto;
-    }
-
-    .flower{
-      position:absolute;
-      width:120px;
       animation:sway 4s ease-in-out infinite;
-    }
-
-    .flower1{
-      left:20px;
-      top:90px;
-      transform:rotate(-15deg);
-    }
-
-    .flower2{
-      left:95px;
-      top:10px;
-      width:140px;
-      z-index:2;
-    }
-
-    .flower3{
-      right:20px;
-      top:100px;
-      transform:rotate(15deg);
-    }
-
-    .wrap{
-      position:absolute;
-      bottom:0;
-      left:50%;
-      transform:translateX(-50%);
-      width:260px;
-      z-index:5;
     }
 
     @keyframes sway{
@@ -220,21 +189,8 @@
         font-size:0.95rem;
       }
 
-      .bouquet{
-        width:260px;
-        height:320px;
-      }
-
-      .flower{
-        width:90px;
-      }
-
-      .flower2{
-        width:110px;
-      }
-
-      .wrap{
-        width:210px;
+      .bouquet-img{
+        width:240px;
       }
     }
 
@@ -330,12 +286,10 @@
         aku harap akhirnya tetap kamu.
       </div>
 
-      <!-- BOUQUET PNG -->
+      <!-- BOUQUET IMAGE -->
 
       <div class="bouquet">
-
-        <img src="peony.png" class="flower flower1">
-
+        <img src="peony.png" class="bouquet-img">
       </div>
 
       <div class="footer">
