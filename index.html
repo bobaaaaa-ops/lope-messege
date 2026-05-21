@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>For My Honey</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      font-family:'Poppins',sans-serif;
+      background: linear-gradient(135deg,#ffd6e7,#ffc2d1,#ffe5ec);
+      overflow-x:hidden;
+      color:white;
+    }
+
+    .hearts{
+      position:fixed;
+      width:100%;
+      height:100%;
+      overflow:hidden;
+      z-index:-1;
+    }
+
+    .heart{
+      position:absolute;
+      bottom:-50px;
+      color:#ff4d88;
+      animation: float 8s linear infinite;
+      opacity:0.7;
+    }
+
+    @keyframes float{
+      0%{
+        transform:translateY(0) rotate(0deg);
+        opacity:0;
+      }
+      30%{
+        opacity:0.8;
+      }
+      100%{
+        transform:translateY(-120vh) rotate(360deg);
+        opacity:0;
+      }
+    }
+
+    .container{
+      min-height:100vh;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      padding:40px 20px;
+    }
+
+    .card{
+      background:rgba(255,255,255,0.15);
+      backdrop-filter:blur(12px);
+      border:1px solid rgba(255,255,255,0.3);
+      width:100%;
+      max-width:850px;
+      border-radius:30px;
+      padding:50px 35px;
+      text-align:center;
+      box-shadow:0 10px 40px rgba(0,0,0,0.15);
+      animation:fadeIn 2s ease;
+    }
+
+    @keyframes fadeIn{
+      from{
+        opacity:0;
+        transform:translateY(30px);
+      }
+      to{
+        opacity:1;
+        transform:translateY(0);
+      }
+    }
+
+    h1{
+      font-family:'Playfair Display',serif;
+      font-size:3rem;
+      margin-bottom:20px;
+      color:white;
+    }
+
+    .subtitle{
+      font-size:1.1rem;
+      margin-bottom:35px;
+      opacity:0.95;
+    }
+
+    .letter{
+      text-align:left;
+      line-height:2;
+      font-size:1rem;
+      background:rgba(255,255,255,0.12);
+      padding:30px;
+      border-radius:20px;
+      margin-bottom:35px;
+    }
+
+    .highlight{
+      color:#fff0f5;
+      font-weight:600;
+    }
+
+    button{
+      border:none;
+      padding:15px 35px;
+      border-radius:40px;
+      background:white;
+      color:#ff4d88;
+      font-size:1rem;
+      font-weight:600;
+      cursor:pointer;
+      transition:0.3s;
+      box-shadow:0 5px 20px rgba(0,0,0,0.2);
+    }
+
+    button:hover{
+      transform:scale(1.08);
+      background:#ff4d88;
+      color:white;
+    }
+
+    .hidden-message{
+      margin-top:30px;
+      display:none;
+      animation:fadeIn 1s ease;
+      font-size:1.1rem;
+      line-height:1.8;
+    }
+
+    .footer{
+      margin-top:40px;
+      opacity:0.8;
+      font-size:0.9rem;
+    }
+
+    @media(max-width:600px){
+      h1{
+        font-size:2.2rem;
+      }
+
+      .card{
+        padding:35px 20px;
+      }
+
+      .letter{
+        font-size:0.95rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="hearts">
+    <div class="heart" style="left:10%; font-size:20px;">❤</div>
+    <div class="heart" style="left:20%; animation-delay:2s; font-size:25px;">❤</div>
+    <div class="heart" style="left:35%; animation-delay:4s; font-size:18px;">❤</div>
+    <div class="heart" style="left:50%; animation-delay:1s; font-size:30px;">❤</div>
+    <div class="heart" style="left:65%; animation-delay:5s; font-size:22px;">❤</div>
+    <div class="heart" style="left:80%; animation-delay:3s; font-size:27px;">❤</div>
+    <div class="heart" style="left:90%; animation-delay:6s; font-size:20px;">❤</div>
+  </div>
+
+  <div class="container">
+    <div class="card">
+
+      <h1>For My Honey ❤</h1>
+
+      <p class="subtitle">
+        Sebuah surat kecil dari seseorang yang selalu jatuh cinta
+        ke orang yang sama setiap hari, orang itu adalah kamu
+        
+      </p>
+
+      <div class="letter">
+        Honey,<br><br>
+
+        Aku cuma mau bilang timakasi karena udah bertahan sejauh ini.
+        Timakasi karena masih ada, masih peduli, masih mau dengerin semua hal random dari aku,
+        bahkan di saat aku sendiri kadang sulit ngerti diri aku sendiri.<br><br>
+
+        Aku tau hubungan kita nga selalu sempurna.
+        Kadang ada kecewa, ada marah, ada salah paham,
+        ada hari dimana semuanya terasa berat banget buat dijalanin.<br><br>
+
+        Tapi dari semua hal itu,
+        satu hal yang selalu aku tau adalah
+        <span class="highlight">aku tetep mau kamu.</span><br><br>
+
+        Aku mau semua versi kamu.
+        Versi kamu yang bahagia,
+        yang ngambek,
+        yang capek,
+        yang overthinking,
+        demua versi kamu.<br><br>
+
+        Karena buat aku,
+        rumah bukan tempat.
+        Rumah adalah seseorang.
+        Dann...
+        aku nemuin rasa itu di kamuu.<br><br>
+
+        Kadang aku masi suka mikir,
+        Apa yang bisa kamu terima dari sorang seperti aku.
+        aku suka kamu
+        suara kamu, sentuhan lembut dari kamu
+        dan juga kata" manis dari kamu,
+        bikin hari aku sanagat berwarna.<br><br>
+
+        Aku nga janji bakal selalu sempurna.
+        Tapi aku janji bakal terus belajar.
+        Belajar buat lebih ngerti kamu,
+        lebih jagain kamu,
+        dan lebih menghargai hal kecil tentang kamu.<br><br>
+
+        Kalau suatu hari nanti kamu lagi capek sama dunia,
+        aku harap kamu inget,
+        selalu ada seseorang yang nganggep kamu sangat berharga.<br><br>
+
+        Dan itu aku.
+      </div>
+
+      <button onclick="showMessage()">
+        Click This Honey
+      </button>
+
+      <div class="hidden-message" id="message">
+        ❤ <br><br>
+        Semoga kita selalu dipertemukan berkali-kali,
+        dalam versi terbaik hidup kita nanti.<br><br>
+
+        Dan kalau semesta memang punya rencana,
+        aku harap akhirnya tetap kamu.
+      </div>
+
+      <div class="footer">
+        made with love, effort, and sedikit stress karena coding emang suka drama.
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    function showMessage(){
+      document.getElementById("message").style.display = "block";
+    }
+  </script>
+
+</body>
+</html>
